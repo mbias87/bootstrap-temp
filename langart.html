@@ -5,7 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+3:wght@400;600&display=swap">
 <style> 
+    :root {
+        --parchment: #f8f2e7;
+        --ink-blue: #25324a;
+        --soft-ink: #3d4f6a;
+    }
+
+    body {
+        font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+        background: radial-gradient(circle at 15% 10%, #fff6e8 0%, transparent 45%),
+            radial-gradient(circle at 85% 20%, #e8f0ff 0%, transparent 40%),
+            linear-gradient(180deg, #fbf7f0 0%, #f1eadf 100%);
+        color: var(--ink-blue);
+    }
+
+    h1, h2, h3 {
+        font-family: "Libre Baskerville", "Georgia", serif;
+        color: var(--ink-blue);
+    }
+
+    h1 {
+        font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+    }
+
+    h2 {
+        font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    }
+
+    .intro-card {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .intro-card + .intro-card {
+        margin-top: 1.25rem;
+    }
+
+    .reading-text {
+        max-width: 42rem;
+        line-height: 1.7;
+    }
+
+    .accordion .card {
+        border-radius: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .accordion .card-body {
+        padding: 1rem 1.25rem;
+    }
+
+    .accordion .card-body img {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 18px rgba(37, 50, 74, 0.12);
+        margin-bottom: 0.75rem;
+    }
 </style>
 </head>
 
@@ -106,11 +165,11 @@
             </div>
             <div class="row mt-1">
                 <div class="col-12 col-lg-7">
-                    <div class="card w-100">
+                    <div class="card w-100 intro-card">
                         <div class="card-body">
                             <h5 class="card-title">The hands of a poor <span class="font-italic">campesina</span></h5>
                             <h6>What do Esperanza’s hands suggest about her whole life?</h6>
-                            <p class="card-text">Sometimes, an author uses a single scene to communicate a big idea that
+                            <p class="card-text reading-text">Sometimes, an author uses a single scene to communicate a big idea that
                                 the author doesn’t want readers to miss. Pam Muñoz Ryan creates such as scene at the
                                 beginning of <em>“Los Aguacates:</em> Avocados.<em>”</em> This scene is brief, but it
                                 develops an
@@ -119,9 +178,9 @@
                                 move the plot forward. </p>
                         </div>
                     </div>
-                    <div class="card w-100 mt-3">
+                    <div class="card w-100 intro-card">
                         <div class="card-body"> 
-                            <p class="card-text"> Read the opening pages of <em>“Los Aguacates</em>: Avocados<em>”</em> closely again.
+                            <p class="card-text reading-text"> Read the opening pages of <em>“Los Aguacates</em>: Avocados<em>”</em> closely again.
                                 Then, review the details from the scene listed below before answering a question about
                                 what the scene adds to the novel’s plot and themes. </p>
                         </div>
@@ -146,7 +205,7 @@
                                 data-parent="#accordionExample">
                                 <div class="card-body">
                                     <img src="https://previews.123rf.com/images/jedimaster/jedimaster1409/jedimaster140900496/31874709-open-hands.avif" class="img-fluid" />
-                                    <p>After tying grape canes for days in the cold, foggy weather, Esperanza soaks her
+                                    <p class="reading-text">After tying grape canes for days in the cold, foggy weather, Esperanza soaks her
                                         tired hands in warm water and realizes something: “she no longer recognized them
                                         as her own.” They are so beaten up and swollen that they seem like “the hands of
                                         a very old man.” How might this realization make her feel?
@@ -167,7 +226,7 @@
                                 data-parent="#accordionExample">
                                 <div class="card-body">
                                     <img src="https://www.seriouseats.com/thmb/0ULStg1JqMZZhdQsSuNTXzfzVms=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__04__20180309-avocado-knife-skills-vicky-wasik-5-826b6902aff240fcbb6494cc90ab8bbf.jpg" class="img-fluid" />
-                                    <p>Hortensia says that they are “lucky” to have avocados, which are not in season.
+                                    <p class="reading-text">Hortensia says that they are “lucky” to have avocados, which are not in season.
                                         Friends brought the fruits from Los Angeles. Esperanza is lucky, too, to have
                                         Hortensia’s help and friendship. How might Esperanza feel as she watches
                                         Hortensia make the lotion, as she did for Mama when they were back in Mexico?
@@ -189,7 +248,7 @@
                                 data-parent="#accordionExample">
                                 <div class="card-body">
                                     <img src="https://californiaavocado.com/wp-content/uploads/2023/04/Chicken-Avocado-Burrito-Bowls-with-California-Avocado-Cilantro-Sauce-Photos-14-1-scaled-e1680677230235.jpg" class="img-fluid" />
-                                    <p> Seeing her hands coated in Hortensia’s homemade avocado lotion brings memories
+                                    <p class="reading-text"> Seeing her hands coated in Hortensia’s homemade avocado lotion brings memories
                                         to Esperanza’s mind: Mama’s smooth, soft hands and how quickly she worked with
                                         the crochet hook; Mama’s grace and presence; Mama’s bright, confident laughter.
                                         What mixed emotions might these memories cause?</p>

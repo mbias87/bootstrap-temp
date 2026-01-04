@@ -5,10 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
+  :root {
+    --classroom-cream: #fff4db;
+    --classroom-peach: #ffe2c6;
+    --classroom-blue: #2b5b8a;
+  }
+
+  body {
+    font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    background: radial-gradient(circle at 10% 10%, #fff0d6 0%, transparent 40%),
+      radial-gradient(circle at 90% 20%, #dff1ff 0%, transparent 45%),
+      linear-gradient(180deg, #fffaf3 0%, #f6efe4 100%);
+  }
+
+  h1, h2, h3 {
+    font-family: "Baloo 2", "Trebuchet MS", sans-serif;
+    color: var(--classroom-blue);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  }
+
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  #qaAccordion .card {
+    margin-bottom: 1.25rem;
+    border-radius: 0.75rem;
+  }
+
+  #qaAccordion .card-header p {
+    max-width: 44rem;
+    line-height: 1.6;
   }
 
   #qaAccordion .card-header img {
@@ -23,10 +60,19 @@
     height: auto;
   }
 
+  #qaAccordion .card-body p {
+    max-width: 44rem;
+    line-height: 1.7;
+  }
+
   #qaAccordion .alert img {
     width: 100%;
     max-width: 320px;
     height: auto;
+  }
+
+  .answer-badge {
+    min-width: 8.5rem;
   }
 </style>
 </head>
@@ -144,16 +190,18 @@
                       
                           <div id="q1" class="collapse show" aria-labelledby="q1Head" data-parent="#qaAccordion">
                             <div class="card-body">
-                              <div class="row">
+                              <div class="row align-items-center">
                                 <div class="col-md-7 mb-3 mb-md-0">
                                   <img src="..." class="img-fluid rounded" alt="">
                                   <div id="q1Display" class="mt-3 font-weight-bold text-primary"></div>
                                 </div>
                                 <div class="col-md-5">
                                   <label class="font-weight-bold" for="q1Input">Answer</label>
-                                  <input id="q1Input" class="form-control mb-2" inputmode="numeric">
-                                  <button class="btn btn-primary btn-block js-check" type="button" data-display="#q1Display">Check</button>
-                                  <div id="q1Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                                  <div class="d-flex flex-column flex-md-row align-items-md-center">
+                                    <input id="q1Input" class="form-control mb-2 mb-md-0 mr-md-2 answer-input" inputmode="numeric">
+                                    <button class="btn btn-primary mt-2 mt-md-0 js-check" type="button" data-display="#q1Display" data-answer="6">Check</button>
+                                  </div>
+                                  <div id="q1Feedback" class="mt-2 badge badge-light d-none answer-badge" aria-live="polite"></div>
                       
                                   <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q1Hint">
                                     Show hint
@@ -178,16 +226,18 @@
                         
                             <div id="q2" class="collapse show" aria-labelledby="q2Head" data-parent="#qaAccordion">
                               <div class="card-body">
-                                <div class="row">
+                                <div class="row align-items-center">
                                   <div class="col-md-7 mb-3 mb-md-0">
                                     <img src="..." class="img-fluid rounded" alt="">
                                     <div id="q2Display" class="mt-3 font-weight-bold text-primary"></div>
                                   </div>
                                   <div class="col-md-5">
                                     <label class="font-weight-bold" for="q2Input">Answer</label>
-                                    <input id="q2Input" class="form-control mb-2" inputmode="numeric">
-                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q2Display">Check</button>
-                                    <div id="q2Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                                    <div class="d-flex flex-column flex-md-row align-items-md-center">
+                                      <input id="q2Input" class="form-control mb-2 mb-md-0 mr-md-2 answer-input" inputmode="numeric">
+                                      <button class="btn btn-primary mt-2 mt-md-0 js-check" type="button" data-display="#q2Display" data-answer="6">Check</button>
+                                    </div>
+                                    <div id="q2Feedback" class="mt-2 badge badge-light d-none answer-badge" aria-live="polite"></div>
                         
                                     <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q2Hint">
                                       Show hint
@@ -214,7 +264,7 @@
                         
                             <div id="q3" class="collapse show" aria-labelledby="q3Head" data-parent="#qaAccordion">
                               <div class="card-body">
-                                <div class="row">
+                                <div class="row align-items-center">
                                   <div class="col-md-7 mb-3 mb-md-0">
                                     <img src="..." class="img-fluid rounded" alt="">
                                     <p>There are 6 pencils! Here is how to skip count to 20. Try it!</p>
@@ -222,9 +272,11 @@
                                   </div>
                                   <div class="col-md-5">
                                     <label class="font-weight-bold" for="q3Input">Answer</label>
-                                    <input id="q3Input" class="form-control mb-2" inputmode="numeric">
-                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q3Display">Check</button>
-                                    <div id="q3Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                                    <div class="d-flex flex-column flex-md-row align-items-md-center">
+                                      <input id="q3Input" class="form-control mb-2 mb-md-0 mr-md-2 answer-input" inputmode="numeric">
+                                      <button class="btn btn-primary mt-2 mt-md-0 js-check" type="button" data-display="#q3Display" data-answer="20">Check</button>
+                                    </div>
+                                    <div id="q3Feedback" class="mt-2 badge badge-light d-none answer-badge" aria-live="polite"></div>
                                     
                                     <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q3Hint">
                                       Show hint
@@ -250,16 +302,18 @@
                         
                             <div id="q4" class="collapse show" aria-labelledby="q4Head" data-parent="#qaAccordion">
                               <div class="card-body">
-                                <div class="row">
+                                <div class="row align-items-center">
                                   <div class="col-md-7 mb-3 mb-md-0">
                                     <img src="..." class="img-fluid rounded" alt="">
                                     <div id="q4Display" class="mt-3 font-weight-bold text-primary"></div>
                                   </div>
                                   <div class="col-md-5">
                                     <label class="font-weight-bold" for="q4Input">Answer</label>
-                                    <input id="q4Input" class="form-control mb-2" inputmode="numeric">
-                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q4Display">Check</button>
-                                    <div id="q4Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                                    <div class="d-flex flex-column flex-md-row align-items-md-center">
+                                      <input id="q4Input" class="form-control mb-2 mb-md-0 mr-md-2 answer-input" inputmode="numeric">
+                                      <button class="btn btn-primary mt-2 mt-md-0 js-check" type="button" data-display="#q4Display" data-answer="20">Check</button>
+                                    </div>
+                                    <div id="q4Feedback" class="mt-2 badge badge-light d-none answer-badge" aria-live="polite"></div>
                         
                                     <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q4Hint">
                                       Show hint
@@ -284,15 +338,20 @@
                         
                             <div id="q5" class="collapse show" aria-labelledby="q5Head" data-parent="#qaAccordion">
                               <div class="card-body">
-                                <div class="row">
+                                <div class="row align-items-center">
                                   <div class="col-md-7 mb-3 mb-md-0"> 
                                     <div id="q5Display" class="mt-3 font-weight-bold text-primary"></div>
                                   </div>
                                   <div class="col-md-5">
                                     <label class="font-weight-bold" for="q5Input">Answer</label>
-                                    <input id="q5Input" class="form-control mb-2" inputmode="numeric">
-                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q5Display">Check</button>
-                                    <div id="q5Feedback" class="mt-2 d-none font-weight-bold text-uppercase"><b>Feedback</b>: There are 20 erasers.</p></div>
+                                    <div class="d-flex flex-column flex-md-row align-items-md-center">
+                                      <input id="q5Input" class="form-control mb-2 mb-md-0 mr-md-2 answer-input" inputmode="numeric">
+                                      <button class="btn btn-primary mt-2 mt-md-0 js-check" type="button" data-display="#q5Display" data-answer="20">Check</button>
+                                    </div>
+                                    <div id="q5Feedback" class="mt-2 badge badge-light d-none answer-badge" aria-live="polite">
+                                        <div class="alert alert-info mb-0"><img src="https://i.ibb.co/zTTJ1Qbs/1-2-twenty-erasers-grouped-counted.png" class="img-fluid" /></div>
+
+                                    </div>
                         
                                     <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q5Hint">
                                       Show hint
@@ -321,13 +380,34 @@
         button.addEventListener('click', () => {
           const card = button.closest('.card');
           const input = card ? card.querySelector('input') : null;
+          const feedback = card ? card.querySelector('[id$="Feedback"]') : null;
           const displaySelector = button.getAttribute('data-display');
           const display = displaySelector ? document.querySelector(displaySelector) : null;
+          const expected = button.getAttribute('data-answer');
 
-          if (!display) return;
+          if (!display || !feedback || !input) return;
 
-          const value = input ? input.value.trim() : '';
+          const value = input.value.trim();
           display.textContent = value ? `Your answer: ${value}` : 'Enter an answer first.';
+
+          feedback.classList.remove('d-none', 'badge-light', 'badge-success', 'badge-danger', 'badge-warning');
+          input.classList.remove('is-valid', 'is-invalid');
+
+          if (!value) {
+            feedback.textContent = 'Enter an answer.';
+            feedback.classList.add('badge-warning');
+            return;
+          }
+
+          if (expected && value === expected) {
+            feedback.textContent = 'Correct';
+            feedback.classList.add('badge-success');
+            input.classList.add('is-valid');
+          } else {
+            feedback.textContent = 'Try again';
+            feedback.classList.add('badge-danger');
+            input.classList.add('is-invalid');
+          }
         });
       });
     </script>
