@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" <head>
+<html lang="en"></html> 
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <style>
-    .nav-link {
-        color: white !important;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #qaAccordion .card-header img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+  }
+
+  #qaAccordion .card-body img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  #qaAccordion .alert img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
 </style>
 </head>
 
 <body>
     <header class="mb-1">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white sticky-top">
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active px-3">
-                        <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item  px-3">
+                        <a class="nav-link " href="#">Home </a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link" href="solar.html">Science</a>
@@ -31,6 +51,7 @@
                     </li>
                 </ul>
                 <div class="dropdown">
+                    
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
                         aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -85,7 +106,7 @@
                         <button class="btn btn-primary">Home</button>
                     </a>
                     <a href="#" class="list-group-item border bg-primary">
-                        <button class="btn btn-primary">Engadge</button>
+                        <button class="btn btn-primary">Engage</button>
                     </a>
                     <a href="#" class="list-group-item border bg-primary">
                         <button class="btn btn-primary">Explore</button>
@@ -111,53 +132,182 @@
                 <div class="col-12"> 
                     <h1>Grouping and Counting</h1> 
                     <h2> Can you group and count the items? Lets learn how.</h2>
-                    <div class="accordion" id="accordionExample">
-                        <div class="card" data-slide="0">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left text-dark" type="button" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <p>How many pencils do we have?</p>
-                                        <img src="https://i.ibb.co/Xx9hMF4y/1-2-six-pencils.png" class="img-fluid" alt="Pencils" />
-                                        <br>
-                                        <br>
-                                        <p>It will help us to <b>group</b> the pencils. This means we will put them in groups. We <b>group</b> items that are the same. Here are the pencils in groups of 2. 
-                                        </p> 
-                                        <br>
-                                        <img src="https://i.ibb.co/FbzQr9gy/1-2-six-pencils-grouped.png" class="img-fluid" alt="Group Pencils" />
-                                        <br>
-                                        <br>
-                                        <p>We can <b>skip count</b> by 2 to count the pencils. This means we will count up by 2. Like this:</p>
-                                        <img src="https://i.ibb.co/HfwyBvBf/1-2-six-pencils-grouped-counted.png" class="img-fluid" alt="Skip Count Pencils" />
+                    <div class="accordion" id="qaAccordion">
 
-                                    </button>
-                                </h2>
-                            </div>
-    
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
-                                <div class="card-body"> 
+                        <div class="card">
+                          <div class="card-header" id="q1Head">
+                            <button class="btn btn-link btn-block text-left text-dark" type="button"
+                              data-toggle="collapse" data-target="#q1" aria-expanded="true" aria-controls="q1">
+                              <p>How many pencils do we have?</p>
+                            <img src="https://i.ibb.co/Xx9hMF4y/1-2-six-pencils.png" class="img-fluid" alt="Pencils" />
+                            </button>
+                          </div>
+                      
+                          <div id="q1" class="collapse show" aria-labelledby="q1Head" data-parent="#qaAccordion">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-7 mb-3 mb-md-0">
+                                  <img src="..." class="img-fluid rounded" alt="">
+                                  <div id="q1Display" class="mt-3 font-weight-bold text-primary"></div>
                                 </div>
+                                <div class="col-md-5">
+                                  <label class="font-weight-bold" for="q1Input">Answer</label>
+                                  <input id="q1Input" class="form-control mb-2" inputmode="numeric">
+                                  <button class="btn btn-primary btn-block js-check" type="button" data-display="#q1Display">Check</button>
+                                  <div id="q1Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                      
+                                  <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q1Hint">
+                                    Show hint
+                                  </button>
+                                  <div id="q1Hint" class="collapse">
+                                    <div class="alert alert-info mb-0">Group by 2 and skip count.</div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                        <div class="card" data-slide="1">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        How many erasers do you see?
+
+                        <div class="card">
+                            <div class="card-header" id="q2Head">
+                              <button class="btn btn-link btn-block text-left text-dark" type="button"
+                                data-toggle="collapse" data-target="#q2" aria-expanded="false" aria-controls="q2">
+                                <p>It will help us to <b>group</b> the pencils. This means we will put them in groups. We <b>group</b> items that are the same. Here are the pencils in groups of 2. 
+                                    <img src="https://i.ibb.co/FbzQr9gy/1-2-six-pencils-grouped.png" class="img-fluid" alt="Group Pencils" />
+                              </button>
+                            </div>
+                        
+                            <div id="q2" class="collapse show" aria-labelledby="q2Head" data-parent="#qaAccordion">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-7 mb-3 mb-md-0">
+                                    <img src="..." class="img-fluid rounded" alt="">
+                                    <div id="q2Display" class="mt-3 font-weight-bold text-primary"></div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <label class="font-weight-bold" for="q2Input">Answer</label>
+                                    <input id="q2Input" class="form-control mb-2" inputmode="numeric">
+                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q2Display">Check</button>
+                                    <div id="q2Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                        
+                                    <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q2Hint">
+                                      Show hint
                                     </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p><b>Feedback</b>: There are 20 erasers.</p>
+                                    <div id="q2Hint" class="collapse">
+                                      <div class="alert alert-info mb-0">Group by 2 and skip count.</div>
+                                    </div>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
-                        </div> 
-                    </div>
+                          </div>
+
+
+                          <div class="card">
+                            <div class="card-header" id="q3Head">
+                              <button class="btn btn-link btn-block text-left text-dark" type="button"
+                                data-toggle="collapse" data-target="#q3" aria-expanded="false" aria-controls="q3">
+                                <p>We can <b>skip count</b> by 2 to count the pencils. This means we will count up by 2. Like this:</p>
+                                <br>
+                                <img src="https://i.ibb.co/HfwyBvBf/1-2-six-pencils-grouped-counted.png" class="img-fluid" alt="Skip Count Pencils" />
+                              </button>
+                            </div>
+                        
+                            <div id="q3" class="collapse show" aria-labelledby="q3Head" data-parent="#qaAccordion">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-7 mb-3 mb-md-0">
+                                    <img src="..." class="img-fluid rounded" alt="">
+                                    <p>There are 6 pencils! Here is how to skip count to 20. Try it!</p>
+                                    <div id="q3Display" class="mt-3 font-weight-bold text-primary"></div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <label class="font-weight-bold" for="q3Input">Answer</label>
+                                    <input id="q3Input" class="form-control mb-2" inputmode="numeric">
+                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q3Display">Check</button>
+                                    <div id="q3Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                                    
+                                    <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q3Hint">
+                                      Show hint
+                                    </button>
+                                    <div id="q3Hint" class="collapse">
+                                      <div class="alert alert-info mb-0">Group by 2 and skip count.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="card">
+                            <div class="card-header" id="q4Head">
+                              <button class="btn btn-link btn-block text-left text-dark" type="button"
+                                data-toggle="collapse" data-target="#q4" aria-expanded="false" aria-controls="q4">
+                                <p>Lets practice. Skip count by 2 and type your answer into the box below. Once you have your answer typed, click the answer button to check your answer.</p>
+                                <img src="https://i.ibb.co/bg87WHvy/1-2-twenty-pencils-grouped-counted.png" class="img-fluid" />
+                              </button>
+                            </div>
+                        
+                            <div id="q4" class="collapse show" aria-labelledby="q4Head" data-parent="#qaAccordion">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-7 mb-3 mb-md-0">
+                                    <img src="..." class="img-fluid rounded" alt="">
+                                    <div id="q4Display" class="mt-3 font-weight-bold text-primary"></div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <label class="font-weight-bold" for="q4Input">Answer</label>
+                                    <input id="q4Input" class="form-control mb-2" inputmode="numeric">
+                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q4Display">Check</button>
+                                    <div id="q4Feedback" class="mt-2 d-none font-weight-bold text-uppercase"></div>
+                        
+                                    <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q4Hint">
+                                      Show hint
+                                    </button>
+                                    <div id="q4Hint" class="collapse">
+                                      <div class="alert alert-info mb-0">Group by 2 and skip count.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="card-header" id="q5Head">
+                              <button class="btn btn-link btn-block text-left text-dark" type="button"
+                                data-toggle="collapse" data-target="#q5" aria-expanded="false" aria-controls="q5">
+                                How many erasers do you see? 
+                                <img src="https://i.ibb.co/ccfRh2sV/1-2-twenty-erasers-grouped-2rows.png" class="img-fluid" />
+                              </button>
+                            </div>
+                        
+                            <div id="q5" class="collapse show" aria-labelledby="q5Head" data-parent="#qaAccordion">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-7 mb-3 mb-md-0"> 
+                                    <div id="q5Display" class="mt-3 font-weight-bold text-primary"></div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <label class="font-weight-bold" for="q5Input">Answer</label>
+                                    <input id="q5Input" class="form-control mb-2" inputmode="numeric">
+                                    <button class="btn btn-primary btn-block js-check" type="button" data-display="#q5Display">Check</button>
+                                    <div id="q5Feedback" class="mt-2 d-none font-weight-bold text-uppercase"><b>Feedback</b>: There are 20 erasers.</p></div>
+                        
+                                    <button class="btn btn-link px-0 mt-2" type="button" data-toggle="collapse" data-target="#q5Hint">
+                                      Show hint
+                                    </button>
+                                    <div id="q5Hint" class="collapse">
+                                      <div class="alert alert-info mb-0"><img src="https://i.ibb.co/zTTJ1Qbs/1-2-twenty-erasers-grouped-counted.png" class="img-fluid" /></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+                      </div>
+               
                 </div>
             </div> 
     </main>
@@ -167,36 +317,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            var $carousel = $('#carouselExampleCaptions');
-            var $accordion = $('#accordionExample');
+    <script> 
+      document.querySelectorAll('.js-check').forEach((button) => {
+        button.addEventListener('click', () => {
+          const card = button.closest('.card');
+          const input = card ? card.querySelector('input') : null;
+          const displaySelector = button.getAttribute('data-display');
+          const display = displaySelector ? document.querySelector(displaySelector) : null;
 
-            function openAccordionByIndex(index) {
-                // find the collapse div inside the matching card
-                var $card = $accordion.find('.card[data-slide="' + index + '"]');
-                var $collapse = $card.find('.collapse');
+          if (!display) return;
 
-                // open it (bootstrap accordion will close others because of data-parent)
-                $collapse.collapse('show');
-            }
-
-            // When carousel finishes sliding, sync accordion
-            $carousel.on('slid.bs.carousel', function (e) {
-                // e.to is the destination slide index (Bootstrap 4)
-                openAccordionByIndex(e.to);
-            });
-            // When a collapse panel is shown, move carousel to matching slide
-            $accordion.on('shown.bs.collapse', '.collapse', function () {
-                var $card = $(this).closest('.card');
-                var index = parseInt($card.attr('data-slide'), 10);
-                $carousel.carousel(index);
-            });
-            // On page load, open the accordion that matches the current active slide
-            var initialIndex = $carousel.find('.carousel-item.active').index();
-            openAccordionByIndex(initialIndex);
+          const value = input ? input.value.trim() : '';
+          display.textContent = value ? `Your answer: ${value}` : 'Enter an answer first.';
         });
-
+      });
     </script>
 </body>
 
